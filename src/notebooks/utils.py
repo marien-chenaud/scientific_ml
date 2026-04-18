@@ -343,44 +343,27 @@ def plot_pointwise_comparison(weak_model, strong_model, x_points):
     print(f"  Std Error: {np.std(strong_error):.6f}")
     print(f"  Max Error: {np.max(strong_error):.6f}")
 
-
-def plot_accuracy_vs_points(nb_points, weak_loss, strong_loss):
-    """Plot accuracy vs number of training points for scientific publication"""
-    # Create figure with appropriate size for scientific paper
-    fig, ax = plt.subplots(figsize=(8, 6), dpi=150)
-    
-    # Plot with clear markers and lines
-    ax.plot(nb_points, weak_loss, 
-            color="blue", marker="^", linestyle="-", 
-            linewidth=2, markersize=10, markeredgecolor='white', markeredgewidth=1,
-            label="Weak constraint")
-    ax.plot(nb_points, strong_loss, 
-            color="red", marker="*", linestyle="-", 
-            linewidth=2, markersize=12, markeredgecolor='white', markeredgewidth=1,
-            label="Strong constraint")
-    
-    # Set log scale for x-axis since points increase exponentially
-    ax.set_xscale('log')
+def plot_multi_accuracy_vs_points(nb_points, results_val, results_div, results_train, legends, colors):
+    fig, axes = plt.subplots(1, 2, figsize=(14, 6))
+    ax = axes[0]
+    for i in range(len(results_val)):
+        ax.plot(nb_points, results_val[i], label="Validation Loss - " + legends[i], color=colors[i])
+        ax.plot(nb_points, results_train[i], label="Train Loss - " + legends[i], linestyle="--", color=colors[i])
     ax.set_yscale('log')
-    
-    # Customize axes
-    ax.set_xlabel('Number of training points', fontsize=14, fontweight='bold')
-    ax.set_ylabel('Validation MSE loss', fontsize=14, fontweight='bold')
-    ax.set_title('Model Performance vs Training Set Size', 
-                fontsize=16, fontweight='bold', pad=20)
-    
-    # Add grid for better readability
-    ax.grid(True, alpha=0.3, linestyle='--')
-    
-    # Format tick labels
-    ax.tick_params(axis='both', which='major', labelsize=12)
-    
-    # Add legend with frame
-    ax.legend(fontsize=12, frameon=True, framealpha=0.9, loc='best')
-    
-    # Adjust layout
+    ax.set_ylabel('Error')
+    ax.set_xlabel("Number of sampled points")
+    ax.set_title("Loss")
+    ax.legend()
+    ax.grid(True)
+    ax = axes[1]
+    for i in range(len(results_div)):
+        ax.plot(nb_points, results_div[i], label="Divergence - " + legends[i], color=colors[i])
+    ax.set_yscale('log')
+    ax.set_ylabel("Divergence norm")
+    ax.set_xlabel("Number of sampled points")
+    ax.set_title("Divergence")
+    ax.legend()
+    ax.grid(True)
+
     plt.tight_layout()
-    # Save figure
-    plt.savefig('./accuracy_vs_points.pdf', format='pdf', bbox_inches='tight', dpi=300)
-    
     plt.show()

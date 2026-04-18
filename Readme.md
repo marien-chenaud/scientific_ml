@@ -1,9 +1,9 @@
-## How to learn Physics - *A practical review of Scientific Machine Learning*
+## How to learn Physics: *A practical review of Scientific Machine Learning*
 **Marien Chenaud, José Alves, Frédéric Magoulès**
 
 ### Description
 
-This is the official repository of the article cited below. Both numerical examples are gathered under `src/notebooks/`.
+This is the official repository of the article cited below. Numerical examples are gathered under `src/notebooks/`.
 
 <p align="center">
   <img src="/docs/sciML.PNG" alt="sciML" width="600">
@@ -18,7 +18,7 @@ This is the official repository of the article cited below. Both numerical examp
 If you like this work, please consider citing the corresponding article:
 
 > Marien Chenaud, José Alves, Frédéric Magoulès. 
->How to learn Physics -  A practical review on Scientific Machine Learning. 
+>How to learn Physics:  A practical review on Scientific Machine Learning. 
 >*Preprint*.
 
 ### License
