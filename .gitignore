@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.pyc
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Model checkpoints produced by running the notebooks
+*.pt
+*.pth
+
+# Environments
+.venv/
+venv/

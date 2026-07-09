@@ -18,9 +18,9 @@ This is the official repository of the article cited below. Numerical examples a
 If you like this work, please consider citing the corresponding article:
 
 > Marien Chenaud, José Alves, Frédéric Magoulès. 
->How to learn Physics:  A practical review on Scientific Machine Learning. 
->*Preprint*.
+>How to learn Physics:  A practical review of Scientific Machine Learning. 
+>*Archives of Computational Methods in Engineering*, 2026.
 
 ### License
 
-This repository is under construction. Do not distribute.
+This repository is released under the [MIT License](LICENSE).
