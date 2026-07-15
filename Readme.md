@@ -15,11 +15,11 @@ This is the official repository of the article cited below. Numerical examples a
 
 ### Citation
 
-If you like this work, please consider citing the corresponding article:
-
-> Marien Chenaud, José Alves, Frédéric Magoulès. 
->How to learn Physics:  A practical review of Scientific Machine Learning. 
->*Archives of Computational Methods in Engineering*, 2026.
+If you like this work, please consider citing the corresponding article, [available here](https://rdcu.be/ftLNV):
+> Chenaud, M., Alves, J. & Magoulès, F. 
+> How to Learn Physics: *A Practical Review of Scientific Machine Learning*. 
+> Arch Computat Methods Eng (2026). 
+> https://doi.org/10.1007/s11831-026-10735-z
 
 ### License
 
